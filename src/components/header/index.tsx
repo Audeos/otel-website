@@ -19,7 +19,7 @@ const Header: React.FC = () => {
     )
     return (
         <div className={"flex flex-col items-center w-full h-auto bg-amber-300"}>
-            <NavLink to={"/"} end={true} >
+            <NavLink className={"w-fit h-fit"} to={"/"} end={true} >
                 <img className={"w-40 h-auto"} src={"logo.png"} alt={"logo"}/>
             </NavLink>
             <div className={"justify-center flex gap-8 w-full"}>
