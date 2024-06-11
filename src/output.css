@@ -620,6 +620,11 @@ video {
   width: 10rem;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .flex-col {
   flex-direction: column;
 }
