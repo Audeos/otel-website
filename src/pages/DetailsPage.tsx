@@ -1,17 +1,30 @@
-import React, {useCallback, useEffect, useMemo} from "react";
+import React, {useEffect, useRef} from "react";
 import {useParams} from "react-router";
 import {NavLink} from "react-router-dom";
 
 const DetailsPage: React.FC = () => {
     const {type} = useParams();
+    const basicRef = useRef<HTMLDivElement>(null);
+    const exclusiveRef = useRef<HTMLDivElement>(null);
+    const superRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-
+        switch (type) {
+            case "0":
+                basicRef.current?.scrollIntoView({behavior: "smooth", block: "start"});
+                break;
+            case "1":
+                exclusiveRef.current?.scrollIntoView({behavior: "smooth", block: "start"});
+                break;
+            case "2":
+                superRef.current?.scrollIntoView({behavior: "smooth", block: "start"});
+                break;
+        }
     }, [type]);
 
     return (
         <div className={"px-14 py-10"}>
-            <div className={"flex justify-between text-white"}>
+            <div ref={basicRef} className={"flex justify-between text-white"}>
                 <img className={"h-[600px] object-cover"} src={"../public/wallpapers/pic3.avif"} alt={"pic2"}/>
                 <div className={"w-full px-10 py-6 bg-[#421700] text-[#E4D1C3]"}>
                     <p className={"text-2xl text-center font-light"}>Temel Paket</p>
@@ -39,8 +52,8 @@ const DetailsPage: React.FC = () => {
                 Temel paketimiz, konforlu ve ekonomik bir tatil arayan misafirlerimiz için idealdir. 16 metrekarelik odalarımızda, bir veya iki kişi rahatça konaklayabilir. Evcil hayvan dostu odalarımızda, sevimli dostlarınızı da yanınızda getirebilirsiniz. Sabah kahvaltısı ve akşam yemeği, otelimizin restoranında sunulmaktadır. Ayrıca, gün boyu kullanabileceğiniz yüzme havuzumuz da hizmetinizdedir.
             </p>
 
-            <div className={"flex justify-between"}>
-                <div className={"w-full px-10 py-6 bg-[#001E4D] text-[#FAF4E9]"}>
+            <div ref={exclusiveRef} className={"flex justify-between"}>
+                <div  className={"w-full px-10 py-6 bg-[#001E4D] text-[#FAF4E9]"}>
                     <p className={"text-2xl text-center  font-light"}>Ayrıcalıklı Paket</p>
                     <ul className={"list-disc space-y-2 font-thin  text-xl mt-6"}>
                         <li>
@@ -73,7 +86,7 @@ const DetailsPage: React.FC = () => {
                 Ayrıcalıklı paketimiz, aileler ve geniş gruplar için mükemmel bir seçenektir. 26 metrekarelik ana oda ve 14 metrekarelik süit ile geniş ve konforlu bir konaklama deneyimi sunar. Çocuk bakım hizmetimiz sayesinde, ebeveynler rahatça dinlenirken çocuklarınız güvende olacak. Sauna, jakuzi ve hamam gibi lüks hizmetlerle tatilinizi daha da keyifli hale getirebilirsiniz. </p>
 
 
-            <div className={"flex justify-between"}>
+            <div ref={superRef} className={"flex justify-between"}>
                 <img className={"h-[600px] object-cover"} src={"../public/wallpapers/pic2.avif"} alt={"pic3"}/>
                 <div className={`w-full px-10 py-6 bg-[#F1FFF4]`}>
                     <p className={"text-2xl text-center font-light"}>Süper Paket</p>
