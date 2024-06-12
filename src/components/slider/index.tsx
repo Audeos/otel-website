@@ -18,24 +18,24 @@ const Slider: React.FC = () => {
             className={"px-12 mt-8"}
         >
             <div className={"w-[1920px] h-[600px]"}>
-                <img className={"object-cover w-full h-full"} src={"pic6.jpg"}/>
+                <img className={"object-cover w-full h-full"} src={"wallpapers/pic6.avif"} alt={"slider_image-1"}/>
                 <div className={"flex flex-col justify-center absolute bottom-0 h-64 px-12 w-full bg-gradient-to-t from-black to-transparent"}>
-                    <p className={"text-left text-white text-3xl font-medium  stroke-black"}>İzmir, Urla</p>
-                    <p className={"text-left text-white text-xl font-medium mt-4"}>Bu yazı sakin tatil beldelerinden birinde geçirmeye ne dersiniz?</p>
+                    <p className={"text-left text-white text-3xl font-thin  stroke-black"}>İzmir, Urla</p>
+                    <p className={"text-left text-white text-xl font-thin mt-4"}>Bu yazı Ege'nin sakin beldelerinden birinde geçirmeye ne dersiniz?</p>
                 </div>
             </div>
             <div className={"w-[1920px] h-[600px]"}>
-                <img className={"object-cover w-full h-full"} src={"pic5.jpg"}/>
+                <img className={"object-cover w-full h-full"} src={"wallpapers/pic1.avif"} alt={"slider_image-2"}/>
                 <div className={"flex flex-col justify-center absolute bottom-0 h-64 px-12 w-full bg-gradient-to-t from-black to-transparent"}>
-                    <p className={"text-left text-white text-3xl font-medium  stroke-black"}>Antalya, Kaş</p>
-                    <p className={"text-left text-white text-xl font-medium mt-4"}>Tiyatro ve alışveriş merkezlerine yakın bu tatil yerinde deniz ve kültür bir arada.</p>
+                    <p className={"text-left text-white text-3xl font-thin  stroke-black"}>Antalya, Kaş</p>
+                    <p className={"text-left text-white text-xl font-thin mt-4"}>Tiyatro ve alışveriş merkezlerine yakın bu tatil yerinde deniz ve kültür bir arada.</p>
                 </div>
             </div>
             <div className={"w-[1920px] h-[600px]"}>
-                <img className={"object-cover w-full h-full"} src={"pic3.jpg"}/>
+                <img className={"object-cover w-full h-full"} src={"wallpapers/pic2.avif"} alt={"slider_image-3"}/>
                 <div className={"flex flex-col justify-center absolute bottom-0 h-64 px-12 w-full bg-gradient-to-t from-black to-transparent"}>
-                    <p className={"text-left text-white text-3xl font-medium  stroke-black"}>Rize, Kaçkar</p>
-                    <p className={"text-left text-white text-xl font-medium mt-4"}>Dağların arasında huzur verici bir tatile hazır olun...</p>
+                    <p className={"text-left text-white text-3xl font-thin  stroke-black"}>Rize, Kaçkar</p>
+                    <p className={"text-left text-white text-xl font-thin mt-4"}>Karadeniz'in yaylalarında huzur dolu bir tatil sizi bekliyor.</p>
                 </div>
             </div>
 
