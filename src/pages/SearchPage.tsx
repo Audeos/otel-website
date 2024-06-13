@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from "react";
+import React, {useState} from "react";
 import Data from "../../public/mock-rooms.json"
 import {Translations} from "../utils/Translations.ts";
 import GridRoom from "../components/grid-room";
@@ -22,10 +22,6 @@ const SearchPage: React.FC = () => {
     const toggleFeature = (feature: keyof typeof features) => {
         setFeatures(prevState => ({...prevState, [feature]: !prevState[feature]}));
     };
-
-
-
-
 
     return (
         <div className="w-full h-full flex flex-col lg:flex-row">
