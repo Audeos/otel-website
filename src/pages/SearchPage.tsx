@@ -1,11 +1,13 @@
-import React, {useState} from "react";
+import React, {useCallback, useState} from "react";
 import Data from "../../public/mock-rooms.json"
 import {Translations} from "../utils/Translations.ts";
 import GridRoom from "../components/grid-room";
+import FilterSlider from "../components/filter-slider";
 
 const SearchPage: React.FC = () => {
     const [personCount, setPersonCount] = useState(1);
     const [area, setArea] = useState(16);
+    const [price, setPrice] = useState(20);
     const [features, setFeatures] = useState({
         childCare: false,
         breakfastDinner: false,
@@ -24,33 +26,36 @@ const SearchPage: React.FC = () => {
 
 
 
+
     return (
         <div className="w-full h-full flex flex-col lg:flex-row">
             <div className="w-full lg:w-[500px] bg-gray-100 flex p-4 lg:p-8">
                 <div className="bg-white p-4 lg:p-8 rounded shadow-md w-full max-w-2xl">
                     <h1 className="text-xl font-bold mb-6 text-center">Filtreleme Seçenekleri</h1>
-                    <div className="mb-6">
-                        <label className="block text-sm font-medium text-gray-700">Kişi Sayısı: {personCount}</label>
-                        <input
-                            type="range"
-                            min="1"
-                            max="8"
-                            value={personCount}
-                            onChange={(e) => setPersonCount(Number(e.target.value))}
-                            className="w-full"
-                        />
-                    </div>
-                    <div className="mb-6">
-                        <label className="block text-sm font-medium text-gray-700">Metrekare: {area}m²</label>
-                        <input
-                            type="range"
-                            min="16"
-                            max="70"
-                            value={area}
-                            onChange={(e) => setArea(Number(e.target.value))}
-                            className="w-full"
-                        />
-                    </div>
+                    <FilterSlider
+                        label="Kişi Sayısı"
+                        min={1}
+                        max={8}
+                        value={personCount}
+                        onChange={setPersonCount}
+                    />
+                    <FilterSlider
+                        label="Metrekare"
+                        min={16}
+                        max={170}
+                        value={area}
+                        onChange={setArea}
+                        unit="m²"
+                    />
+                    <FilterSlider
+                        label="Fiyat"
+                        min={20}
+                        max={300}
+                        value={price}
+                        onChange={setPrice}
+                        unit="₺"
+                    />
+
                     <div className="gap-4">
                         {Object.keys(features).map((featureKey) => (
                             <button
