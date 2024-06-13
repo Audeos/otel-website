@@ -7,9 +7,9 @@ const RootLayout: React.FC = () => {
 
 
     return (
-        <div className={"flex flex-col min-h-screen"}>
+        <div className={"flex flex-col"}>
             <Header/>
-            <main className={"flex-grow bg-repeat bg-60% bg-[url(/background2.png)]"}>
+            <main className={"flex-grow w-screen bg-repeat bg-60% bg-[url(/background2.png)]"}>
                 <Outlet/>
             </main>
             <Footer/>

@@ -15,8 +15,9 @@ const Slider: React.FC = () => {
             showThumbs={false}
             thumbWidth={screen.width}
             centerSlidePercentage={100}
+            className={"min-w-[1000px]"}
         >
-            <div className={"w-[1920px] h-[600px]"}>
+            <div className={"min-w-[1000px] w-[1920px] h-[600px]"}>
                 <img className={"object-cover w-full h-full"} src={"wallpapers/pic6.avif"} alt={"slider_image-1"}/>
                 <div className={"flex flex-col justify-center absolute bottom-0 h-64 px-12 w-full bg-gradient-to-t from-black to-transparent"}>
                     <p className={"text-left text-white text-3xl font-thin  stroke-black"}>İzmir, Urla</p>

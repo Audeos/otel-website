@@ -17,7 +17,7 @@ const Header: React.FC = () => {
     const NavigationItem: React.FC<PropsWithChildren<NavigationItemProps>> = (props) => {
         const {url, title} = props;
         return (
-            <div className={"flex flex-col group w-auto text-center justify-center font-thin text-lg h-fit"}>
+            <div className={"flex flex-col group min-w-fit w-auto text-center justify-center font-thin text-lg h-fit"}>
                 <NavLink className={"w-full px-6"} to={url}>
                     {title}
                     <div className={"w-0 bg-gray-600 group-hover:w-full h-0.5 transform duration-500"}/>
