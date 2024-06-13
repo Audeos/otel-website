@@ -1,6 +1,5 @@
 import React, {useEffect, useRef} from "react";
 import {useParams} from "react-router";
-import {NavLink} from "react-router-dom";
 
 const DetailsPage: React.FC = () => {
     const {type} = useParams();
@@ -23,10 +22,10 @@ const DetailsPage: React.FC = () => {
     }, [type]);
 
     return (
-        <div className={"px-14 py-10"}>
+        <div className={"mx-14 flex flex-col border-x-[2px] border-[#050A28]"}>
             <div ref={basicRef} className={"flex justify-between text-white"}>
                 <img className={"h-[600px] object-cover"} src={"../public/wallpapers/pic3.avif"} alt={"pic2"}/>
-                <div className={"w-full px-10 py-6 bg-[#421700] text-[#E4D1C3]"}>
+                <div className={"w-full px-10 py-6 bg-[#edf1f6] text-[#050A28]"}>
                     <p className={"text-2xl text-center font-light"}>Temel Paket</p>
                     <ul className={"list-disc space-y-2 font-thin text-xl mt-6"}>
                         <li>
@@ -53,7 +52,7 @@ const DetailsPage: React.FC = () => {
             </p>
 
             <div ref={exclusiveRef} className={"flex justify-between"}>
-                <div  className={"w-full px-10 py-6 bg-[#001E4D] text-[#FAF4E9]"}>
+                <div  className={"w-full px-10 py-6 bg-[#bad6eb] text-[#FAF4E9]"}>
                     <p className={"text-2xl text-center  font-light"}>Ayrıcalıklı Paket</p>
                     <ul className={"list-disc space-y-2 font-thin  text-xl mt-6"}>
                         <li>
@@ -88,7 +87,7 @@ const DetailsPage: React.FC = () => {
 
             <div ref={superRef} className={"flex justify-between"}>
                 <img className={"h-[600px] object-cover"} src={"../public/wallpapers/pic2.avif"} alt={"pic3"}/>
-                <div className={`w-full px-10 py-6 bg-[#F1FFF4]`}>
+                <div className={`w-full px-10 py-6 bg-[#7096d1]`}>
                     <p className={"text-2xl text-center font-light"}>Süper Paket</p>
                     <ul className={"list-disc space-y-2 font-thin text-xl mt-6"}>
                         <li>
@@ -127,12 +126,6 @@ const DetailsPage: React.FC = () => {
             <p className={"p-10 text-xl font-thin bg-[#FDFFFB] flex flex-col gap-4"}>
                 <span className={"text-2xl "}>Detaylı Açıklama:</span>
                 Süper paketimiz, en üst düzeyde lüks ve konfor arayan misafirlerimiz için tasarlandı. 40 metrekarelik geniş oda ve 30 metrekarelik süit, büyük aileler ve gruplar için idealdir. Tekne turları ile denizin keyfini çıkarabilir, ücretsiz kültür etkinlikleri ile bölgenin zengin kültürünü keşfedebilirsiniz. Kültür Bakanlığı tarafınca onaylı, alanında uzman Profesyonel Turist Rehberlerimizin hizmetiyle, tatiliniz unutulmaz bir tecrübeye dönüşecek. </p>
-
-            <p className={"italic font-light text-2xl flex justify-center items-center gap-2 mt-6"}>Daha detaylı bilgi ve diğer sorularınız için
-                <NavLink to={"/communication/"}>
-                    <span className={"text-blue-900 text-right underline"}> bize ulaşın</span>
-                </NavLink>
-            </p>
 
         </div>
     )

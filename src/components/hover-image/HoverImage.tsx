@@ -22,7 +22,7 @@ const HoverImage: React.FC<HoverImageProps> = (props) => {
         [description, isAlignedRight]
     )
     return (
-        <div className="flex relative group w-[1000px] overflow-hidden transform">
+        <div className="flex relative group w-[1000px] border-[#050A28] border-2 overflow-hidden transform">
             <img
                 src={src}
                 alt="History Background"
