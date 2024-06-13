@@ -18,7 +18,7 @@ function App() {
             {path: "/search/", element: <SearchPage/>},
             {path: "/about/", element: <AboutPage/>},
             {path: "/communication/", element: <CommunicationPage/>},
-            {path: "/details/:type/", element: <DetailsPage/>}
+            {path: "/details/:type?/", element: <DetailsPage/>}
         ]
     }])
 

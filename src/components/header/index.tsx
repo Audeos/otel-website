@@ -3,6 +3,7 @@ import {NavLink} from "react-router-dom";
 
 const titles: Array<{ title: string, url: string }> = [
     {title: "Oda Bul", url: "/search/"},
+    {title: "Paketler", url: "/details/"},
     {title: "Hakkımızda", url: "/about/"},
     {title: "İletişim", url: "/communication/"},
 ]
@@ -28,7 +29,7 @@ const Header: React.FC = () => {
     return (
         <div className={"flex flex-col items-center w-full h-auto "}>
             <NavLink className={"w-fit h-fit"} to={"/"} end={true} >
-                <img className={"w-40 h-auto"} src={"logo.png"} alt={"logo"}/>
+                <img className={"w-40 h-auto"} src={"/logo.png"} alt={"logo"}/>
             </NavLink>
             <div className={"justify-center flex gap-8 py-6 w-full"}>
                 {titles.map(({title, url}) => (<NavigationItem url={url} title={title}/>))}
